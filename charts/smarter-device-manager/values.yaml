@@ -9,6 +9,22 @@ image:
   tag: ""
   pullPolicy: IfNotPresent
 
+# Node labels for pod assignment
+# ref: https://kubernetes.io/docs/user-guide/node-selection/
+# nodeSelector:
+#   kubernetes.io/os: linux
+
+# Tolerations for pod assignment
+# ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+# tolerations:
+# - key: "key1"
+#   operator: "Equal"
+#   value: "value1"
+#   effect: "NoSchedule"
+# - key: "key2"
+#   operator: "Exists"
+#   effect: "NoExecute"
+
 # If a specific configurations is used it can be provided by uncommenting this lines
 # config:
 #   - devicematch: ^snd$
