@@ -29,6 +29,9 @@ spec:
         operator: "Equal"
         value: "edge"
         effect: "NoSchedule"
+      {{- if .Values.tolerations }}
+      {{- toYaml .Values.tolerations | nindent 6 }}
+      {{- end }}
       priorityClassName: "system-node-critical"
       hostname: {{ .Values.application.appName }}
       hostNetwork: true
